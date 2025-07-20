@@ -12,9 +12,25 @@ You can return the answer in any order.
 
 ```ts
 function twoSum(nums: number[], target: number): number[] {
-    // TODO: Implement solution
+  // TODO: Implement solution
 }
 ```
+
+<details> <summary>Click to reveal solution</summary>
+```ts
+function twoSum(nums: number[], target: number): number[] {
+    const map = new Map<number, number>();
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (map.has(complement)) {
+            return [map.get(complement)!, i];
+        }
+        map.set(nums[i], i);
+    }
+    return [];
+}
+```
+</details>
 
 ## Contains Duplicate
 
@@ -24,6 +40,6 @@ Given an integer array nums, return true if any value appears at least twice in 
 
 ```ts
 function containsDuplicate(nums: number[]): boolean {
-    // TODO: Implement solution
+  // TODO: Implement solution
 }
 ```
