@@ -16,6 +16,20 @@ function isPalindrome(s: string): boolean {
 
 <details> <summary>Click to reveal solution</summary>
 
+**Approach**: Two Pointers  
+**Pattern**: Preprocess input, then compare from both ends moving inward.
+
+**Step-by-step explanation**:
+
+1. First, preprocess the string: convert to lowercase and remove all non-alphanumeric characters
+2. Set up two pointers: left at the beginning, right at the end of the cleaned string
+3. Compare characters at both pointers
+4. If they don't match, it's not a palindrome - return false
+5. If they match, move both pointers toward the center (left++, right--)
+6. Continue until pointers meet or cross
+7. If we successfully compare all pairs, it's a palindrome - return true
+8. Time: O(n), Space: O(n) for the cleaned string
+
 ```ts
 function isPalindrome(s: string): boolean {
   // Convert to lowercase and keep only alphanumeric characters
@@ -53,6 +67,20 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
 ```
 
 <details> <summary>Click to reveal solution</summary>
+
+**Approach**: Three Pointers (Reverse Merge)  
+**Pattern**: Merge from end to avoid overwriting, leveraging extra space in nums1.
+
+**Step-by-step explanation**:
+
+1. Key insight: nums1 has extra space at the end, so we merge backwards to avoid overwriting
+2. Set up three pointers: i (last element of nums1), j (last element of nums2), k (last position in nums1)
+3. Compare nums1[i] and nums2[j], place the larger one at nums1[k]
+4. Move the pointer of the array we took from, and move k backwards
+5. Continue until we've processed all elements from both arrays
+6. Handle remaining elements: if nums2 has leftover elements, copy them over
+7. If nums1 has leftover elements, they're already in the right place
+8. Time: O(m+n), Space: O(1) - true in-place merge
 
 ```ts
 function merge(nums1: number[], m: number, nums2: number[], n: number): void {
