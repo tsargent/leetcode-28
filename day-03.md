@@ -16,6 +16,27 @@ function maxProfit(prices: number[]): number {
 }
 ```
 
+<details> <summary>Click to reveal solution</summary>
+
+```ts
+function maxProfit(prices: number[]): number {
+  let minPrice = prices[0];
+  let maxProfit = 0;
+
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] < minPrice) {
+      minPrice = prices[i];
+    } else {
+      maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+    }
+  }
+
+  return maxProfit;
+}
+```
+
+</details>
+
 ## Maximum Subarray
 
 https://leetcode.com/problems/maximum-subarray
@@ -27,3 +48,22 @@ function maxSubArray(nums: number[]): number {
   // TODO: Implement solution
 }
 ```
+
+<details> <summary>Click to reveal solution</summary>
+
+```ts
+function maxSubArray(nums: number[]): number {
+  let maxSum = nums[0];
+  let currentSum = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    // Either extend the current subarray or start a new one
+    currentSum = Math.max(nums[i], currentSum + nums[i]);
+    maxSum = Math.max(maxSum, currentSum);
+  }
+
+  return maxSum;
+}
+```
+
+</details>
