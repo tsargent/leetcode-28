@@ -17,19 +17,21 @@ function twoSum(nums: number[], target: number): number[] {
 ```
 
 <details> <summary>Click to reveal solution</summary>
+
 ```ts
 function twoSum(nums: number[], target: number): number[] {
-    const map = new Map<number, number>();
-    for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-        if (map.has(complement)) {
-            return [map.get(complement)!, i];
-        }
-        map.set(nums[i], i);
+  const map = new Map<number, number>();
+  for (let i = 0; i < nums.length; i++) {
+    const complement = target - nums[i];
+    if (map.has(complement)) {
+      return [map.get(complement)!, i];
     }
-    return [];
+    map.set(nums[i], i);
+  }
+  return [];
 }
 ```
+
 </details>
 
 ## Contains Duplicate
@@ -43,3 +45,20 @@ function containsDuplicate(nums: number[]): boolean {
   // TODO: Implement solution
 }
 ```
+
+<details> <summary>Click to reveal solution</summary>
+
+```ts
+function containsDuplicate(nums: number[]): boolean {
+  const set = new Set<number>();
+  for (const num of nums) {
+    if (set.has(num)) {
+      return true;
+    }
+    set.add(num);
+  }
+  return false;
+}
+```
+
+</details>
