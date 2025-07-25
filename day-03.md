@@ -80,6 +80,22 @@ function maxSubArray(nums: number[]): number {
 6. This captures the essence of dynamic programming: optimal substructure
 7. Time: O(n), Space: O(1) - single pass with constant space
 
+**Example walkthrough** with `nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]`:
+
+```
+i=0: maxSum = -2, currentSum = -2
+i=1: currentSum = max(1, -2+1) = 1, maxSum = max(-2, 1) = 1
+i=2: currentSum = max(-3, 1-3) = -2, maxSum = max(1, -2) = 1
+i=3: currentSum = max(4, -2+4) = 4, maxSum = max(1, 4) = 4
+i=4: currentSum = max(-1, 4-1) = 3, maxSum = max(4, 3) = 4
+i=5: currentSum = max(2, 3+2) = 5, maxSum = max(4, 5) = 5
+i=6: currentSum = max(1, 5+1) = 6, maxSum = max(5, 6) = 6
+i=7: currentSum = max(-5, 6-5) = 1, maxSum = max(6, 1) = 6
+i=8: currentSum = max(4, 1+4) = 5, maxSum = max(6, 5) = 6
+```
+
+The optimal subarray is [4, -1, 2, 1] with sum = 6.
+
 ```ts
 function maxSubArray(nums: number[]): number {
   let maxSum = nums[0];

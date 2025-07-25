@@ -14,6 +14,20 @@ function search(nums: number[], target: number): number {
 }
 ```
 
+<details> <summary>Click to reveal solution</summary>
+
+**Approach**: [Approach Name]  
+**Pattern**: [Pattern Description]
+
+**Step-by-step explanation**:
+[Detailed explanation to be added]
+
+```ts
+// Solution to be implemented
+```
+
+</details>
+
 ## First Bad Version
 
 https://leetcode.com/problems/first-bad-version
@@ -36,3 +50,17 @@ function solution(isBadVersion: any) {
   };
 }
 ```
+
+<details> <summary>Click to reveal solution</summary>
+
+**Approach**: [Approach Name]  
+**Pattern**: [Pattern Description]
+
+**Step-by-step explanation**:
+[Detailed explanation to be added]
+
+```ts
+// Solution to be implemented
+```
+
+</details>

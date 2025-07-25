@@ -18,6 +18,20 @@ function isValid(s: string): boolean {
 }
 ```
 
+<details> <summary>Click to reveal solution</summary>
+
+**Approach**: [Approach Name]  
+**Pattern**: [Pattern Description]
+
+**Step-by-step explanation**:
+[Detailed explanation to be added]
+
+```ts
+// Solution to be implemented
+```
+
+</details>
+
 ## Min Stack
 
 https://leetcode.com/problems/min-stack
@@ -47,3 +61,17 @@ class MinStack {
   }
 }
 ```
+
+<details> <summary>Click to reveal solution</summary>
+
+**Approach**: [Approach Name]  
+**Pattern**: [Pattern Description]
+
+**Step-by-step explanation**:
+[Detailed explanation to be added]
+
+```ts
+// Solution to be implemented
+```
+
+</details>
